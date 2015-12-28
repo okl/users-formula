@@ -45,3 +45,5 @@
     'googleauth_package': 'libpam-google-authenticator',
   },
 }, merge=salt['pillar.get']('users:lookup')) %}
+
+{do users.update(salt['pillar.get']('users', {})) %}

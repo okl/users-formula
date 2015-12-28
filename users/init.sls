@@ -80,6 +80,9 @@ users_{{ name }}_user:
     {% if 'uid' in user -%}
     - uid: {{ user['uid'] }}
     {% endif -%}
+    {% if 'unique' in user -%}
+    - unique: {{ user['unique'] }}
+    {% endif -%}
     {% if 'password' in user -%}
     - password: '{{ user['password'] }}'
     {% endif -%}
